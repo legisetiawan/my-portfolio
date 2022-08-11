@@ -1,27 +1,28 @@
-import React from "react";
-import { AppBar, Toolbar, Typography, Box, Button } from "@mui/material";
+import React, { useState } from "react";
+import Pendididkan from "./Pendididkan";
+import Tentang from "./Tentang";
 
-const navItems = ["Pendidikan", "Skills", "Project","Kontak"];
 const Navbar = () => {
+  const [position, setPostion] = useState(["tentang", "pendidikan"]);
+  const linkNavHandler = (e,pos) => {
+    e.preventDefault();
+    setPostion(pos);
+  };
   return (
     <>
-      <Box sx={{ display: "flex" }}>
-        <AppBar>
-          <Toolbar component="nav">
-            <Typography variant="h4" sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}>
-              {" "}
-              legi setiawan
-            </Typography>
-            <Box sx={{ display: { xs: "none", sm: "block" } }}>
-              {navItems.map((item) => (
-                <Button key={item} sx={{ color: "#fff" }}>
-                  {item}
-                </Button>
-              ))}
-            </Box>
-          </Toolbar>
-        </AppBar>
-      </Box>
+      <ul style={{ display: "flex", gap: "0.5em", listStyleType: "none" }}>
+        <li>
+          <a href="#" onClick={(e) => linkNavHandler(e,"tentang")}>
+            tentang
+          </a>
+        </li>
+        <li>
+          <a href="#" onClick={(e) => linkNavHandler(e,"pendidikan")}>
+            pendidikan
+          </a>
+        </li>
+      </ul>
+      {position === "tentang" ? <Tentang/> : <Pendididkan/>}
     </>
   );
 };

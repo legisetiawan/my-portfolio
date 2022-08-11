@@ -1,10 +1,10 @@
-import './App.css';
-import Profile from './containers/Profile';
+import "./App.css";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-    <Profile/>
+      <Navbar/>
     </>
   );
 }
