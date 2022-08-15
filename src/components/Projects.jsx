@@ -1,12 +1,12 @@
-import { Box, CardHeader, Container } from '@mui/material';
+import { Box, Container, Typography } from '@mui/material';
 import React from 'react'
 
 const Projects = () => {
   return (
     <>
-    <Box>
+    <Box sx={{mt:10}}>
         <Container>
-            <CardHeader>Projects</CardHeader>
+            <Typography variant='h4'>Projects</Typography>
         </Container>
     </Box>
     </>

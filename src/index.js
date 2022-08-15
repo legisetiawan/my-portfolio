@@ -8,6 +8,8 @@ import Pendididkan from "./components/Pendididkan";
 import Profile from "./containers/Profile";
 import Tentang from "./components/Tentang";
 import Home from './containers/Home';
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -18,6 +20,8 @@ root.render(
         <Route path="/" element={<Profile/>} />
         <Route path="/tentang" element={<Tentang />} />
         <Route path="/pendidikan" element={<Pendididkan />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/skills" element={<Skills/>} />
       </Routes>
       <App />
     </Router>

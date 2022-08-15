@@ -6,8 +6,7 @@ import Navbar from './Navbar'
 const Pendididkan = () =>{
   return (
     <>
-    <Navbar/>
-    <Box>
+    <Box sx={{mt:10}}>
         <Container sx={{ display:"flex",bgcolor:"lightBlue",minWidth:500,minHeight:500,textAlign:"center",mt:3,mb:3}} maxWidth="lg">
             <Typography variant='body1'> Universitas Muhammadiyah Riau</Typography>
         </Container>
