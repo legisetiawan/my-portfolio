@@ -1,17 +1,25 @@
-import React from 'react'
-import { Typography } from '@mui/material';
-import Navbar from '../components/Navbar';
-import Tentang from '../components/Tentang';
-import Pendididkan from '../components/Pendididkan';
-import Skills from '../components/Skills';
-import Projects from '../components/Projects';
+import React from "react";
+import { Box, Typografy, AppBar, Toolbar } from "@mui/material";
+import { Link } from "react-router-dom";
+import Tentang from "../components/Tentang";
 
 const Profile = () => {
   return (
-    <> 
+    <>
+      <Box sx={{ display: "flex" }}>
+        <AppBar>
+          <Toolbar>
+            <Link to="/tentang" style={{ color: "white", marginRight: 5 }}>
+              Tentang
+            </Link>
+            <Link to="/pendidikan" style={{ color: "white" }}>
+              Pendidikan
+            </Link>
+          </Toolbar>
+        </AppBar>
+      </Box>
     </>
   );
+};
 
-}
-
-export default Profile
+export default Profile;

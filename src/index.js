@@ -7,13 +7,15 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Pendididkan from "./components/Pendididkan";
 import Profile from "./containers/Profile";
 import Tentang from "./components/Tentang";
+import Home from './containers/Home';
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<Profile />} />
+        <Route path="/" element={<Profile/>} />
         <Route path="/tentang" element={<Tentang />} />
         <Route path="/pendidikan" element={<Pendididkan />} />
       </Routes>

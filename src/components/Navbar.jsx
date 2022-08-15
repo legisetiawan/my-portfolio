@@ -1,28 +1,22 @@
 import React, { useState } from "react";
 import Pendididkan from "./Pendididkan";
 import Tentang from "./Tentang";
+import { Link } from "react-router-dom";
+import { AppBar, Toolbar } from "@mui/material";
 
 const Navbar = () => {
-  const [position, setPostion] = useState(["tentang", "pendidikan"]);
-  const linkNavHandler = (e,pos) => {
-    e.preventDefault();
-    setPostion(pos);
-  };
   return (
     <>
-      <ul style={{ display: "flex", gap: "0.5em", listStyleType: "none" }}>
-        <li>
-          <a href="#" onClick={(e) => linkNavHandler(e,"tentang")}>
-            tentang
-          </a>
-        </li>
-        <li>
-          <a href="#" onClick={(e) => linkNavHandler(e,"pendidikan")}>
-            pendidikan
-          </a>
-        </li>
-      </ul>
-      {position === "tentang" ? <Tentang/> : <Pendididkan/>}
+      <AppBar>
+        <Toolbar>
+        <Link to="/tentang" style={{ color: "white", marginRight: 5 }}>
+          Tentang
+        </Link>
+        <Link to="/pendidikan" style={{ color: "white" }}>
+          Pendidikan
+        </Link>
+        </Toolbar>
+        </AppBar>
     </>
   );
 };
