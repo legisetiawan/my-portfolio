@@ -7,8 +7,9 @@ const Skills = () => {
   const [skills, setSkills] = useState([{ id: 1, nama: "Belajar Dasar Pemrograman Web", penerbit: "Dicoding" }]);
   return (
     <>
+      
+      <Container sx={{ display:"flex",bgcolor:"lightBlue",minWidth:500,minHeight:500,textAlign:"center",mt:3,mb:3}} maxWidth="lg">
       <Typography variant="h5">Front End Develover</Typography>
-      <Container maxWidth="lg">
         <CardItems />
         <CardItems />
         <CardItems />

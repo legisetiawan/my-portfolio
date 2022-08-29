@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Typografy, AppBar, Toolbar, Typography } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Box, AppBar, Toolbar, Typography } from "@mui/material";
+import { Link, Outlet } from "react-router-dom";
 import Tentang from "../components/Tentang";
 
 const Profile = () => {

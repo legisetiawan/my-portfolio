@@ -1,5 +1,6 @@
 import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 import React from "react";
+import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
           </Toolbar>
         </AppBar>
       </Box>
+    
     </>
   );
 };

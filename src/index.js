@@ -10,6 +10,7 @@ import Tentang from "./components/Tentang";
 import Home from './containers/Home';
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Copyright from "./components/Copyright";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -17,8 +18,8 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<Profile/>} />
-        <Route path="/tentang" element={<Tentang />} />
+        <Route path="/" element={<Profile/>}/>
+        <Route path="/tentang" element={<Tentang />}/>
         <Route path="/pendidikan" element={<Pendididkan />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/skills" element={<Skills/>} />
